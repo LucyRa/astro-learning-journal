@@ -1,0 +1,56 @@
+---
+import 'css.gg/icons/icons.css';
+import Sidebar from '../components/Sidebar.astro';
+
+interface Props {
+	title?: string;
+}
+
+const { title = 'Welcome' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="ToDo..." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Looki's Learning Journal | {title}</title>
+	</head>
+	<body>
+    <Sidebar />
+
+		<slot name="main" />
+
+    <footer>
+      <!-- Footer content... --!>
+    </footer>
+	</body>
+  </html>
+
+<style lang="scss" is:global>
+  // Global styles & variables
+  
+  :root {
+    --base0:;
+    --base1:;
+    --base2:;
+    --basemuted:;
+    --text:;
+
+    --primary:;
+    --secondary:;
+    --tertiary:;
+    --accent1:;
+    --accent2:;
+    --accent3:;
+
+    --fontdisplay:;
+    --fontsans:;
+
+    font-size:16px;
+  }
+</style>
